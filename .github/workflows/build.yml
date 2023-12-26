@@ -1,0 +1,17 @@
+name: Build
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build andTest
+    runs-on: windows-latest
+    steps:
+      - name: Get the sources
+        uses: actions/checkout@v2
+      - name: Restore the dependencies
+        run: npm ci
+      - name: Build
+        run: npm run all
+        
