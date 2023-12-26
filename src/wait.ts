@@ -1,3 +1,5 @@
+import * as core from '@actions/core'
+
 /**
  * Wait for a number of milliseconds.
  * @param milliseconds The number of milliseconds to wait.
@@ -5,6 +7,7 @@
  */
 export async function wait(milliseconds: number): Promise<string> {
   return new Promise(resolve => {
+    core.notice('hello world! from wait.ts')
     if (isNaN(milliseconds)) {
       throw new Error('milliseconds not a number in wait.ts')
     }

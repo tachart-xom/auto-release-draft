@@ -6,6 +6,8 @@ import * as core from '@actions/core'
  */
 export async function run(): Promise<void> {
   try {
+    core.notice('hello world! from main.ts')
+
     core.setOutput('release-url', 'https://example.com')
   } catch (error) {
     // Fail the workflow run if an error occurs
