@@ -31,8 +31,9 @@ const core = __importStar(require("@actions/core"));
  */
 async function run() {
     try {
-        core.notice('hello world! from main.ts');
+        core.info('setting release-url...');
         core.setOutput('release-url', 'https://example.com');
+        core.info('finished setting release-url.');
     }
     catch (error) {
         // Fail the workflow run if an error occurs
