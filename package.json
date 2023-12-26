@@ -1,16 +1,16 @@
 {
-  "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
+  "name": "auto-release-draft",
+  "description": "Drafts a GitHub release with the changes",
   "version": "0.0.0",
-  "author": "",
+  "author": "Tim C",
   "private": true,
-  "homepage": "https://github.com/actions/typescript-action",
+  "homepage": "https://github.com/tachart-xom/auto-release-draft",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/tachart-xom/auto-release-draft.git"
   },
   "bugs": {
-    "url": "https://github.com/actions/typescript-action/issues"
+    "url": "https://github.com/tachart-xom/auto-release-draft/issues"
   },
   "keywords": [
     "actions",
@@ -33,6 +33,8 @@
     "package": "ncc build src/index.ts --license licenses.txt",
     "package:watch": "npm run package -- --watch",
     "test": "jest",
+    "watch": "ncc build index.js --watch --minify",
+    "build": "ncc build index.js --minify",
     "all": "npm run format:write && npm run lint && npm run test && npm run coverage && npm run package"
   },
   "license": "MIT",
