@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Get the sources
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
       - name: Restore the dependencies
         run: npm ci
       - name: Create a release draft for a version tag
